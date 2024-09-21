@@ -1,19 +1,14 @@
 import connectToDatabase from "@/backend/libs/db";
 import User from "@/backend/models/User";
-
-connectToDatabase();
+import { sendRes  } from "@/hooks/useRes";
+connectToDatabase()
 export async function GET() {
   const user = await User.find();
+  
   try {
-    return Response.json(user, { status: 200 });
+    return Response.json(sendRes("Users GET", user));
   } catch (error) {
-    return Response.json(
-      {
-        msg: "Hello",
-        error,
-      },
-      { status: 400 }
-    );
+    return Response.json(sendRes('error in Users', {error}));
   }
 }
 export async function POST(req: Request) {
