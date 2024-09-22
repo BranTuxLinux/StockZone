@@ -7,9 +7,9 @@ POST http://localhost:3000/api/users HTTP/1.1
 content-type: application/json
 
 {
-  "name": "Brandon Quintero",
-  "email": "brarn.johnson@example.com",
-  "password": "21654132",
+  "name": "sss asd",
+  "email": "asd.dadad@example.com",
+  "password": "555",
   "role": "user"
 }
 ### PUT 
@@ -18,12 +18,12 @@ content-type: application/json
 
 {
   "name": "Brandon Quintero",
-  "email": "brarn.johnson@example.com",
+  "email": "asd.johnson@example.com",
   "password": "21654132",
   "role": "user"
 }
 ### deleted
-PUT http://localhost:3000/api/users/:id HTTP/1.1
+DELETE http://localhost:3000/api/users/66ef3ff6a55c35a35f79085d HTTP/1.1
 content-type: application/json
 
 {

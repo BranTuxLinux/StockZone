@@ -1,10 +1,5 @@
-type ResponseType = {
-    msg: string;
-    data?: object;
-  };
-  
-  type UseResType = [ResponseType, { status?: number }];
-  
-  export const sendRes = (msg: string, data?: object, status?: number): UseResType => {
-    return [{ msg, data }, { status }];
-  };
+import { ResponseType } from "./hooks";
+
+export const sendRes = ({ msg, data }: ResponseType): ResponseType => {
+  return { msg, data };
+};
