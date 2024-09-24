@@ -1,9 +1,9 @@
 ### GET 
 GET http://localhost:3000/api/users HTTP/1.1
 ### GETBY
-GET http://localhost:3000/api/users/:id HTTP/1.1
+GET http://localhost:3000/api/users/66ecc4a3c20f44ee16e8fa40 HTTP/1.1
 ### POST
-POST http://localhost:3000/api/users HTTP/1.1
+POST http://localhost:3000/api/auth/login HTTP/1.1
 content-type: application/json
 
 {

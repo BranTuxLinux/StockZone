@@ -13,11 +13,11 @@ export async function GET() {
     return Response.json(sendRes({ msg: "error in Users", data: error }));
   }
 }
-// #
+
 export async function POST(req: Request) {
-  const userData = await req.json();
-  console.log(userData);
   try {
+    const userData = await req.json();
+    console.log(userData);
     const user = new User(userData);
     await user.save();
     return Response.json(sendRes({msg:"USER CREATED", data:user}), {status:200});
