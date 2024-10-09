@@ -1,7 +1,8 @@
+"use server";
 import jwt from "jsonwebtoken";
-
+import { jwtVerify } from "jose";
 const secretKey = process.env.JWT_SECRET || "your-secret-key"; // Clave secreta almacenada en variables de entorno
-
+const key = new TextEncoder().encode(secretKey)
 export const signToken = (data: object) => {
   const token = jwt.sign(
     data,
@@ -10,14 +11,14 @@ export const signToken = (data: object) => {
   );
   return token;
 };
-export const verifyToken =async (token) => {
+export const verifyToken = (token: string) => {
   try {
-    console.log(token)
-    const decoded = await jwt.verify(token, secretKey);
-    return decoded; 
+    console.log(token);
+    const decoded = jwtVerify(token, key);
+    console.log(`Decode: ${decoded}`);
+    return decoded;
   } catch (error) {
-    console.log(error)
-    throw new Error("Token inválido o expirado"); 
-    
+    console.log(error);
+    throw new Error("Token inválido o expirado");
   }
 };

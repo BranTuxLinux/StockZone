@@ -1,3 +1,5 @@
 # TASK
 
-- JWT ❌
+- JWT ✅
+- user completed ❌
+- extructure ❌
