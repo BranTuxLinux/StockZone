@@ -1,9 +1,9 @@
 ### POST
-POST http://localhost:3000/api/auth/login HTTP/1.1
+POST http://localhost:3000/auth/login HTTP/1.1
 content-type: application/json
 
 {
-  "email": "vetulio@gmai.com",
-  "password": "asdasdasdas"
+  "email": "brarn.johnson@example.com",
+  "password": "21654132"
 }
 ### NO PONER COMAS DE MAS
