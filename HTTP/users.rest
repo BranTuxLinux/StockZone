@@ -1,6 +1,6 @@
 ### GET 
 GET http://localhost:3000/api/users HTTP/1.1
-set-cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJyYXJuLmpvaG5zb25AZXhhbXBsZS5jb20iLCJpYXQiOjE3Mjg1MTczNzgsImV4cCI6MTcyODUyMDk3OH0.qGEEjvulJZX4ZMZdLaYYHivjRrA_kZ5BFq9yFZsVI1k; Path=/
+
 
 ### GETBY
 GET http://localhost:3000/api/users/66ecc4a3c20f44ee16e8fa40 HTTP/1.1
