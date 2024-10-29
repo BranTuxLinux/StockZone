@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { UserProvider } from "@auth0/nextjs-auth0/client";
 import { Navbar } from "@/components/Navbar";
+import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
   title: "STOCKZONE",
@@ -16,10 +17,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <UserProvider>
-        <body className="w-full flex flex-col items-center">
+        <body className="w-full flex flex-col items-center h-full">
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+          >
+
           <Navbar  />
           {children}
-
+          </ThemeProvider>
         </body>
       </UserProvider>
     </html>

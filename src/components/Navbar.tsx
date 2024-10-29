@@ -61,7 +61,6 @@ export function Navbar() {
       <NavigationMenuList>
         <NavItemWithContent title="HACER" components={components} />
         <NavItem title="Documentación" to='/docs' />
-        
       </NavigationMenuList>
     </NavigationMenu>
   );
