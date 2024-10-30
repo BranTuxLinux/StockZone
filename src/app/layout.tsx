@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { UserProvider } from "@auth0/nextjs-auth0/client";
-import { Navbar } from "@/components/Navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
@@ -25,7 +24,7 @@ export default function RootLayout({
             disableTransitionOnChange
           >
 
-          <Navbar  />
+          
           {children}
           </ThemeProvider>
         </body>
